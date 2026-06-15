@@ -1,0 +1,131 @@
+export const personal = {
+  name: "Sateesh Kumar Kollati",
+  title: "Senior Full-Stack Engineer",
+  tagline: "Building high-performance web applications with React, Next.js & AI",
+  email: "sateeshkumar4698@gmail.com",
+  location: "Hyderabad, India",
+  linkedin: "https://www.linkedin.com/in/sateesh-kumar-kollati/",
+  github: "https://github.com/sateeshkumar4698-pixel",
+  twitter: "https://x.com/home",
+  instagram: "https://www.instagram.com/sateesh_dev46/",
+  availableForRemote: true,
+};
+
+export const experience = [
+  {
+    company: "MassMutual (GBS)",
+    role: "Senior Software Developer",
+    period: "Nov 2025 – Present",
+    location: "Hyderabad, India",
+    description: [
+      "Engineered full-stack application platforms using React.js, Next.js, TypeScript, Node.js, and SSR, integrated with Java microservices & Elasticsearch.",
+      "Improved page load time by 30% via code refactoring, caching, and lazy loading strategies.",
+      "Led defect triage sessions, reducing production bug resolution time by 25%.",
+      "Designed & integrated secure payment gateways and a multi-step order management system.",
+      "Built CI/CD pipelines for Canary and Non-Prod deployments, cutting release time by 40%.",
+    ],
+    tech: ["React.js", "Next.js", "TypeScript", "Node.js", "SSR", "Java Microservices", "Elasticsearch", "CI/CD"],
+  },
+  {
+    company: "GlobalLogic (Verizon)",
+    role: "Senior Software Developer",
+    period: "Jan 2025 – Aug 2025",
+    location: "Hyderabad, India",
+    description: [
+      "Engineered micro-frontend e-commerce platforms using React.js, Next.js, TypeScript, Node.js, and SSR, integrated with Java microservices & Elasticsearch.",
+      "Improved page load time by 30% via code refactoring, caching, and lazy loading strategies.",
+      "Led defect triage sessions, reducing production bug resolution time by 25%.",
+      "Designed & integrated secure payment gateways and a multi-step order management system.",
+      "Built CI/CD pipelines for Canary and Non-Prod deployments, cutting release time by 40%.",
+    ],
+    tech: ["React.js", "Next.js", "TypeScript", "Micro-Frontends", "Node.js", "Elasticsearch", "CI/CD"],
+  },
+  {
+    company: "Tata Consultancy Services (TCS)",
+    role: "Software Developer",
+    period: "Oct 2021 – Nov 2024",
+    location: "Hyderabad, India",
+    description: [
+      "Developed reusable UI components in React.js and integrated high-traffic REST APIs.",
+      "Increased test coverage to 85%+ using TDD (Jest) and API documentation with Swagger.",
+      "Partnered with Google on scalable, production-grade applications.",
+      "Mentored junior developers on best practices in UI development and API integration.",
+    ],
+    tech: ["React.js", "TypeScript", "REST APIs", "Jest", "TDD", "Swagger", "Google Cloud"],
+  },
+  {
+    company: "Aguila IT Consulting",
+    role: "Software Developer",
+    period: "Apr 2020 – Sep 2021",
+    location: "Hyderabad, India",
+    description: [
+      "Delivered SPAs and full-stack applications using the MERN stack.",
+      "Built secure backend modules for authentication & role-based access control.",
+      "Optimised database queries, improving API response times by 20%.",
+    ],
+    tech: ["React.js", "Node.js", "MongoDB", "Express.js", "MERN Stack", "JWT Auth"],
+  },
+];
+
+export const skills = [
+  { category: "Frontend", items: ["React.js", "Next.js", "TypeScript", "JavaScript", "Redux", "Tailwind CSS", "Framer Motion"] },
+  { category: "Backend", items: ["Node.js", "Express.js", "REST APIs", "GraphQL", "Java", "Elasticsearch"] },
+  { category: "AI / ML", items: ["Agentic AI", "LLM Integration", "OpenAI API", "LangChain", "Python"] },
+  { category: "Mobile", items: ["Flutter", "React Native"] },
+  { category: "Testing", items: ["Jest", "TDD", "Vitest", "Playwright", "Swagger"] },
+  { category: "DevOps & Tools", items: ["CI/CD", "Docker", "AWS", "Vercel", "Git", "Supabase", "PostgreSQL"] },
+];
+
+export const projects = [
+  {
+    title: "FinFlow — Financial Analytics Platform",
+    description:
+      "Full-stack financial dashboard with real-time data streaming, portfolio tracking, and asset allocation charts. Built with React 18, TypeScript, Recharts, and Tailwind CSS. Deployed via GitHub Actions CI/CD to GitHub Pages.",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80",
+    tech: ["React", "TypeScript", "Recharts", "Tailwind CSS", "GitHub Actions", "Vite"],
+    liveUrl: "https://sateeshkumar4698-pixel.github.io/finflow-dashboard/",
+    githubUrl: "https://github.com/sateeshkumar4698-pixel/finflow-dashboard",
+    featured: true,
+    stats: "Real-time charts · Portfolio tracker · CI/CD deployed",
+  },
+  {
+    title: "ShopFront — Micro-Frontend E-Commerce",
+    description:
+      "Production-grade e-commerce storefront with shopping cart, wishlist, real-time search and category filters. Mobile-responsive with slide-out cart drawer. Built with React 18, TypeScript, Lucide React, deployed via GitHub Actions.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Lucide React", "GitHub Actions", "Vite"],
+    liveUrl: "https://sateeshkumar4698-pixel.github.io/shopfront-ecommerce/",
+    githubUrl: "https://github.com/sateeshkumar4698-pixel/shopfront-ecommerce",
+    featured: true,
+    stats: "Full cart · Wishlist · Search & filters · CI/CD",
+  },
+  {
+    title: "AgentFlow — AI Workflow Automation",
+    description:
+      "Agentic AI platform with multi-agent chat interface — CodeAgent, WebAgent, DataAgent. Context-aware responses, copy-to-clipboard, conversation history, streaming UX with typewriter effect. Switch agents mid-conversation.",
+    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Lucide React", "GitHub Actions", "Vite"],
+    liveUrl: "https://sateeshkumar4698-pixel.github.io/agentflow-ai/",
+    githubUrl: "https://github.com/sateeshkumar4698-pixel/agentflow-ai",
+    featured: true,
+    stats: "Multi-agent · AI chat · Streaming UX · CI/CD",
+  },
+  {
+    title: "DevCollab — Team Project Management",
+    description:
+      "Full-stack project management SaaS with real-time collaboration, role-based access control, and Kanban boards. MERN stack with JWT auth, WebSocket live updates, and a mobile-responsive design. 85%+ test coverage with Jest.",
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&q=80",
+    tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Redux", "WebSockets", "Jest"],
+    liveUrl: "https://github.com/sateeshkumar4698-pixel",
+    githubUrl: "https://github.com/sateeshkumar4698-pixel",
+    featured: false,
+    stats: "85%+ test coverage · Real-time collab · RBAC",
+  },
+];
+
+export const education = {
+  degree: "Bachelor of Science — Computer Science & Electronics",
+  college: "S.V.R.M College, Acharya Nagarjuna University, Andhra Pradesh",
+  year: "2016 – 2019",
+  grade: "7.3 CGPA",
+};
