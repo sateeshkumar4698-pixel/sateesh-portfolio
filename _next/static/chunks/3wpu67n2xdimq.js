@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,95590,o=>{"use strict";var t=o.i(43476);o.s(["default",0,function(){return(0,t.jsx)("button",{onClick:()=>window.print(),className:"px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm hover:bg-indigo-500 transition-colors shadow",children:"Download PDF"})}])}]);
