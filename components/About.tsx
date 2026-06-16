@@ -67,7 +67,7 @@ export default function About() {
                 text: "Currently at MassMutual India, I build high-traffic financial platforms that serve thousands of daily users. Before that, I shipped features at GlobalLogic and Tata Consultancy Services across web and mobile.",
               },
               {
-                text: "I'm passionate about Agentic AI and actively integrating LLMs into products. I'm open to senior remote roles with US or UK companies — I work async-first and communicate in clear English.",
+                text: "I've shipped an agentic AI product end-to-end at MassMutual — from greenfield setup to a deployed MVP — integrating Claude to power autonomous workflows, while owning the full stack solo. I'm open to senior remote roles with US or UK companies — I work async-first and communicate in clear English.",
               },
             ].map(({ text }, i) => (
               <motion.p

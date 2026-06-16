@@ -56,9 +56,10 @@ export default function Resume() {
             <Section title="Professional Summary">
               <p style={{ color: "#475569", lineHeight: 1.75, fontSize: "0.875rem" }}>
                 Senior Full-Stack Engineer with 5+ years of experience building production React and Next.js
-                applications. Delivered high-traffic platforms at MassMutual, Verizon (via GlobalLogic), and
-                Google-partnered projects at TCS. Expert in TypeScript, Node.js, micro-frontends, Elasticsearch,
-                and CI/CD pipelines. Open to senior remote roles with US/UK companies paying in USD.
+                applications, including an agentic AI product shipped solo from greenfield to deployed MVP using
+                Claude (Anthropic) at MassMutual. Delivered high-traffic platforms at MassMutual, Verizon (via
+                GlobalLogic), and a Google client engagement at TCS. Expert in TypeScript, Node.js, micro-frontends,
+                Elasticsearch, and CI/CD pipelines. Open to senior remote roles with US/UK companies paying in USD.
               </p>
             </Section>
 
