@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const links = ["About", "Experience", "Skills", "Projects", "Contact"];
 
@@ -51,13 +52,13 @@ export default function Navigation() {
             </li>
           ))}
           <li>
-            <a
+            <Link
               href="/resume"
               target="_blank"
               className="text-sm px-4 py-2 rounded-lg border border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10 transition-all duration-200"
             >
               Resume
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -90,7 +91,7 @@ export default function Navigation() {
                 </li>
               ))}
               <li>
-                <a href="/resume" className="text-indigo-400 text-sm">Resume →</a>
+                <Link href="/resume" className="text-indigo-400 text-sm">Resume →</Link>
               </li>
             </ul>
           </motion.div>

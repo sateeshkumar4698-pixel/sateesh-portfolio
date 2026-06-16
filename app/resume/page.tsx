@@ -1,5 +1,6 @@
 import { personal, experience, skills, education } from "@/lib/data";
 import { Metadata } from "next";
+import Link from "next/link";
 import PrintButton from "@/components/PrintButton";
 
 export const metadata: Metadata = {
@@ -19,9 +20,9 @@ export default function Resume() {
       `}</style>
 
       <div className="no-print fixed top-4 right-4 flex gap-2 z-50">
-        <a href="/" className="px-4 py-2 rounded-lg border border-slate-300 text-slate-600 text-sm hover:bg-slate-100 transition-colors bg-white shadow">
+        <Link href="/" className="px-4 py-2 rounded-lg border border-slate-300 text-slate-600 text-sm hover:bg-slate-100 transition-colors bg-white shadow">
           ← Portfolio
-        </a>
+        </Link>
         <PrintButton />
       </div>
 
