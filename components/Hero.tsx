@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { personal } from "@/lib/data";
-import { ArrowDown, Code2, Link, Mail } from "lucide-react";
+import { personal, resumePdf } from "@/lib/data";
+import { ArrowDown, Code2, Link, Mail, Download } from "lucide-react";
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -143,9 +143,17 @@ export default function Hero() {
             <Mail size={18} /> Hire Me
           </a>
           <a
+            href={resumePdf}
+            download
+            className="flex items-center gap-2 px-6 py-3 rounded-xl glass border border-white/10 text-white hover:border-indigo-500/50 transition-all duration-200"
+          >
+            <Download size={18} /> Résumé
+          </a>
+          <a
             href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub profile"
             className="flex items-center gap-2 px-5 py-3 rounded-xl glass border border-white/10 text-slate-300 hover:text-white hover:border-white/20 transition-all duration-200"
           >
             <Code2 size={18} />
@@ -160,8 +168,8 @@ export default function Hero() {
           className="flex flex-wrap justify-center gap-8 text-center"
         >
           {[
-            { value: "5+", label: "Years Experience" },
-            { value: "3", label: "Companies" },
+            { value: "6+", label: "Years Experience" },
+            { value: "4", label: "Companies" },
             { value: "React", label: "Primary Stack" },
           ].map(({ value, label }) => (
             <div key={label}>

@@ -6,8 +6,10 @@ const categoryColors: Record<string, string> = {
   Frontend: "from-indigo-500 to-violet-500",
   Backend: "from-violet-500 to-purple-500",
   "AI / ML": "from-purple-500 to-fuchsia-500",
+  Databases: "from-blue-500 to-indigo-500",
+  "Cloud & DevOps": "from-sky-500 to-cyan-500",
   Mobile: "from-fuchsia-500 to-pink-500",
-  Tools: "from-sky-500 to-indigo-500",
+  "Testing & Tools": "from-emerald-500 to-teal-500",
 };
 
 export default function Skills() {

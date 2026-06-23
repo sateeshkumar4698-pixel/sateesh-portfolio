@@ -1,14 +1,28 @@
+// Single source of truth for the portfolio site, the /resume page, and the
+// downloadable PDF (generated from resume-source/resume.html). Keep in sync.
+
+// basePath mirrors next.config.ts so static assets (e.g. the resume PDF) resolve
+// correctly on GitHub Pages in production and at the root during local dev.
+export const basePath = process.env.NODE_ENV === "production" ? "/sateesh-portfolio" : "";
+export const resumePdf = `${basePath}/Sateesh_Kumar_Kollati_Resume.pdf`;
+
 export const personal = {
   name: "Sateesh Kumar Kollati",
   title: "Senior Full-Stack Engineer",
-  tagline: "Building high-performance web applications with React, Next.js & AI",
+  tagline: "Building high-performance web & AI products with React, Next.js, Node.js and Claude",
   email: "sateeshkumar4698@gmail.com",
+  phone: "+91 99597 15252",
+  phoneRaw: "+919959715252",
   location: "Hyderabad, India",
   linkedin: "https://www.linkedin.com/in/sateesh-kumar-kollati/",
   github: "https://github.com/sateeshkumar4698-pixel",
+  website: "https://sateeshkumar4698-pixel.github.io/sateesh-portfolio/",
   twitter: "https://x.com/home",
   instagram: "https://www.instagram.com/sateesh_dev46/",
   availableForRemote: true,
+  yearsExperience: "6+",
+  summary:
+    "Senior Full-Stack Engineer with 6+ years building scalable, high-performance web and mobile products across fintech, insurance, e-commerce, and AI. Deep expertise in React, Next.js, TypeScript, and Node.js, with a track record of shipping production systems at MassMutual, Verizon (via GlobalLogic), and a Google engagement at TCS — including an agentic AI product taken solo from greenfield to a deployed MVP using Claude (Anthropic). Open to senior remote roles with US/UK companies (USD).",
 };
 
 export const experience = [
@@ -18,14 +32,13 @@ export const experience = [
     period: "Nov 2025 – Present",
     location: "Hyderabad, India",
     description: [
-      "Independently took a new initiative from greenfield setup to deployed MVP, owning 100% of the full-stack build — frontend, backend, and deployment — while integrating Claude (Anthropic) to power agentic, autonomous workflows within the product.",
-      "Engineered full-stack application platforms using React.js, Next.js, TypeScript, Node.js, and SSR, integrated with Java microservices & Elasticsearch.",
-      "Improved page load time by 30% via code refactoring, caching, and lazy loading strategies.",
-      "Led defect triage sessions, reducing production bug resolution time by 25%.",
-      "Designed & integrated secure payment gateways and a multi-step order management system.",
-      "Built CI/CD pipelines for Canary and Non-Prod deployments, cutting release time by 40%.",
+      "Took a new initiative from greenfield setup to a deployed MVP, owning 100% of the full-stack build — frontend, backend, and deployment — while integrating Claude (Anthropic) to power agentic, autonomous workflows within the product.",
+      "Engineered secure, scalable financial and insurance platforms with React.js, Next.js, TypeScript, and Node.js (SSR), integrated with Java microservices and Elasticsearch.",
+      "Improved page load time by 30% through code refactoring, caching, and lazy-loading strategies.",
+      "Designed and integrated secure payment gateways and multi-step order-management workflows, prioritizing data integrity and regulatory compliance.",
+      "Built CI/CD pipelines for Canary and non-prod deployments, cutting release time by 40%.",
     ],
-    tech: ["React.js", "Next.js", "TypeScript", "Node.js", "SSR", "Claude (Anthropic)", "Agentic AI", "Java Microservices", "Elasticsearch", "CI/CD"],
+    tech: ["React.js", "Next.js", "TypeScript", "Node.js", "Claude (Anthropic)", "Agentic AI", "Java Microservices", "Elasticsearch", "CI/CD"],
   },
   {
     company: "GlobalLogic (Verizon)",
@@ -35,46 +48,47 @@ export const experience = [
     description: [
       "Engineered micro-frontend modules (cart, checkout, product discovery) for a high-traffic Verizon e-commerce platform using React.js, Next.js, TypeScript, and Node.js with SSR, integrated with Java microservices.",
       "Modernized legacy storefront components, improving responsiveness and Core Web Vitals through code-splitting, caching, and lazy-loading.",
-      "Drove defect triage across the e-commerce squad, streamlining the path from bug report to production fix.",
+      "Drove defect triage across the e-commerce squad, reducing production bug resolution time by 25%.",
       "Designed secure payment gateway integrations and multi-step order-management flows for the checkout experience.",
-      "Introduced automated CI/CD pipelines for Canary and Non-Prod environments, eliminating manual deployment steps and shortening release cycles.",
+      "Introduced automated CI/CD pipelines for Canary and non-prod environments, eliminating manual deployment steps and shortening release cycles by 40%.",
     ],
     tech: ["React.js", "Next.js", "TypeScript", "Micro-Frontends", "Node.js", "Elasticsearch", "CI/CD"],
   },
   {
     company: "Tata Consultancy Services (TCS)",
     role: "Software Engineer",
-    period: "Oct 2021 – Oct 2024",
+    period: "Oct 2021 – Nov 2024",
     location: "Hyderabad, India",
     description: [
-      "Developed reusable UI components in React.js and integrated high-traffic REST APIs.",
-      "Increased test coverage to 85%+ using TDD (Jest) and API documentation with Swagger.",
-      "Delivered scalable, production-grade web applications for Google under a client/vendor engagement, collaborating directly with Google stakeholders on requirements, code reviews, and delivery timelines.",
+      "Developed reusable UI component libraries in React.js and integrated high-traffic REST APIs.",
+      "Increased automated test coverage to 85%+ using TDD (Jest) and documented APIs with Swagger/OpenAPI.",
+      "Delivered scalable, production-grade web applications for Google under a client engagement, collaborating directly with Google stakeholders on requirements, code reviews, and delivery timelines.",
       "Mentored junior developers on best practices in UI development and API integration.",
     ],
     tech: ["React.js", "TypeScript", "REST APIs", "Jest", "TDD", "Swagger", "Google Cloud"],
   },
   {
     company: "Aguila IT Consulting",
-    role: "Junior Software Engineer",
+    role: "Software Engineer",
     period: "Apr 2020 – Sep 2021",
     location: "Hyderabad, India",
     description: [
-      "Delivered SPAs and full-stack applications using the MERN stack.",
-      "Built secure backend modules for authentication & role-based access control.",
-      "Optimised database queries, improving API response times by 20%.",
+      "Delivered single-page and full-stack applications using the MERN stack.",
+      "Built secure backend modules for authentication and role-based access control.",
+      "Optimized database queries and API design, improving response times by 20%.",
     ],
     tech: ["React.js", "Node.js", "MongoDB", "Express.js", "MERN Stack", "JWT Auth"],
   },
 ];
 
 export const skills = [
-  { category: "Frontend", items: ["React.js", "Next.js", "TypeScript", "JavaScript", "Redux", "Tailwind CSS", "Framer Motion"] },
-  { category: "Backend", items: ["Node.js", "Express.js", "REST APIs", "GraphQL", "Java", "Elasticsearch"] },
-  { category: "AI / ML", items: ["Agentic AI", "Claude (Anthropic)", "LLM Integration", "OpenAI API", "LangChain", "Python"] },
+  { category: "Frontend", items: ["React.js", "Next.js", "TypeScript", "JavaScript (ES6+)", "Redux", "Tailwind CSS", "Material UI"] },
+  { category: "Backend", items: ["Node.js", "Express", "NestJS", "REST & GraphQL", "Java (Spring Boot)", "WebSockets", "Kafka"] },
+  { category: "AI / ML", items: ["Agentic AI", "Claude (Anthropic)", "LLM Integration", "OpenAI API", "LangChain", "Prompt Engineering", "Python"] },
+  { category: "Databases", items: ["MongoDB", "PostgreSQL", "MySQL", "Firestore", "DynamoDB", "Elasticsearch"] },
+  { category: "Cloud & DevOps", items: ["AWS", "GCP", "Azure", "Docker", "GitHub Actions", "Jenkins", "Vercel"] },
   { category: "Mobile", items: ["Flutter", "React Native"] },
-  { category: "Testing", items: ["Jest", "TDD", "Vitest", "Playwright", "Swagger"] },
-  { category: "DevOps & Tools", items: ["CI/CD", "Docker", "AWS", "Vercel", "Git", "Supabase", "PostgreSQL"] },
+  { category: "Testing & Tools", items: ["Jest", "TDD", "Cypress", "Playwright", "Postman", "Swagger", "Figma"] },
 ];
 
 export const projects = [
@@ -124,9 +138,59 @@ export const projects = [
   },
 ];
 
-export const education = {
-  degree: "Bachelor of Science — Computer Science & Electronics",
-  college: "S.V.R.M College, Acharya Nagarjuna University, Andhra Pradesh",
-  year: "2016 – 2019",
-  grade: "7.3 CGPA",
-};
+// Professional / client work projects — shown on the resume (no public demo links).
+export const keyProjects = [
+  {
+    title: "FinPlan — Financial Transaction Platform",
+    description:
+      "Built a full-stack financial transaction management platform from the ground up — robust backend logic and an intuitive frontend to streamline complex, compliance-sensitive workflows.",
+    tech: ["React.js", "Node.js", "MongoDB"],
+  },
+  {
+    title: "SoloK — Retirement Fund Management",
+    description:
+      "Developed a full-stack Solo 401(k) retirement-fund administration application from scratch, focused on secure, efficient, and auditable fund operations.",
+    tech: ["NestJS", "PostgreSQL", "React"],
+  },
+  {
+    title: "Starplayers — Fantasy Sports App",
+    description:
+      "Cross-platform fantasy sports application; designed GraphQL APIs and optimized response times for real-time scoring and leaderboards.",
+    tech: ["Flutter", "Node.js", "MongoDB", "GraphQL"],
+  },
+  {
+    title: "ORN-ai — AI EdTech Platform",
+    description:
+      "AI-driven EdTech platform with a React/Node GraphQL backend powering learner performance tracking and reporting.",
+    tech: ["React.js", "Node.js", "GraphQL"],
+  },
+  {
+    title: "Inventory Management System",
+    description:
+      "Role-based, secure inventory platform with REST APIs and granular access control for multi-warehouse operations.",
+    tech: ["Next.js", "Node.js", "MongoDB"],
+  },
+];
+
+export const education = [
+  {
+    degree: "Master of Computer Applications (MCA)",
+    college: "Acharya Nagarjuna University",
+    year: "2019 – 2021",
+    grade: "",
+  },
+  {
+    degree: "B.Sc. — Computer Science",
+    college: "S.V.R.M College (Acharya Nagarjuna University), Andhra Pradesh",
+    year: "2016 – 2019",
+    grade: "7.3 CGPA",
+  },
+];
+
+export const certifications = [
+  { name: "Professional Cloud Architect", issuer: "Google Cloud" },
+  { name: "Professional Cloud Developer", issuer: "Google Cloud" },
+  { name: "Professional Data Engineer", issuer: "Microsoft Azure" },
+  { name: "Prompt Engineering in Generative AI", issuer: "Udemy" },
+  { name: "Full-Stack Development (MERN)", issuer: "Udemy" },
+];

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { personal } from "@/lib/data";
-import { Mail, Link, Code2, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, Link, Code2, Send, CheckCircle } from "lucide-react";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -44,15 +44,16 @@ export default function Contact() {
             className="md:col-span-2 space-y-4"
           >
             {[
-              { icon: <Mail size={18} />, label: "Email", value: personal.email, href: `mailto:${personal.email}` },
-              { icon: <Link size={18} />, label: "LinkedIn", value: "sateesh-kumar-kollati", href: personal.linkedin },
-              { icon: <Code2 size={18} />, label: "GitHub", value: "View my code", href: personal.github },
-            ].map(({ icon, label, value, href }) => (
+              { icon: <Mail size={18} />, label: "Email", value: personal.email, href: `mailto:${personal.email}`, external: false },
+              { icon: <Phone size={18} />, label: "Phone", value: personal.phone, href: `tel:${personal.phoneRaw}`, external: false },
+              { icon: <Link size={18} />, label: "LinkedIn", value: "sateesh-kumar-kollati", href: personal.linkedin, external: true },
+              { icon: <Code2 size={18} />, label: "GitHub", value: "View my code", href: personal.github, external: true },
+            ].map(({ icon, label, value, href, external }) => (
               <a
                 key={label}
                 href={href}
-                target={label !== "Email" ? "_blank" : undefined}
-                rel="noopener noreferrer"
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
                 className="flex items-center gap-4 p-4 glass rounded-xl border border-white/5 hover:border-indigo-500/30 transition-all duration-200 group"
               >
                 <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500/20 transition-colors">

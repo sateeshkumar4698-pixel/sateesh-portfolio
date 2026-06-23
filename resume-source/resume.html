@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+  Source for the downloadable resume PDF.
+  Regenerate: npm run resume:pdf  (renders this file to public/Sateesh_Kumar_Kollati_Resume.pdf via headless Chrome)
+  Keep content in sync with lib/data.ts.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Sateesh Kumar Kollati — Senior Full-Stack Engineer</title>
+<style>
+  :root {
+    --ink: #1e293b;
+    --muted: #475569;
+    --faint: #64748b;
+    --accent: #4f46e5;
+    --accent-dark: #6d28d9;
+    --chip-bg: #eef2ff;
+    --chip-ink: #4338ca;
+    --rule: #e2e8f0;
+  }
+
+  @page { size: A4; margin: 14mm 15mm; }
+
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 10.1pt;
+    line-height: 1.46;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+
+  /* ---- Header ---- */
+  header { border-bottom: 2px solid var(--accent); padding-bottom: 9px; margin-bottom: 12px; }
+  .name { font-size: 22pt; font-weight: 800; letter-spacing: -0.02em; margin: 0; color: #111827; }
+  .title { font-size: 11.5pt; font-weight: 600; color: var(--accent-dark); margin: 3px 0 8px; }
+  .contact { font-size: 8.9pt; color: var(--faint); display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .contact span.sep { color: #cbd5e1; }
+
+  /* ---- Sections ---- */
+  section { margin-bottom: 11px; }
+  h2 {
+    font-size: 9pt; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--accent); margin: 0 0 8px; padding-bottom: 3px; border-bottom: 1px solid var(--rule);
+  }
+  p.summary { margin: 0; color: var(--muted); line-height: 1.6; }
+
+  /* ---- Experience ---- */
+  .job { margin-bottom: 11px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; break-inside: avoid; }
+  .job-role { font-size: 10.6pt; font-weight: 700; color: var(--ink); margin: 0; }
+  .job-co { font-size: 9.4pt; font-weight: 600; color: var(--accent); margin: 1px 0 0; }
+  .job-dates { font-size: 8.7pt; color: var(--faint); white-space: nowrap; }
+  ul { margin: 4px 0 5px; padding-left: 16px; }
+  li { color: var(--muted); margin-bottom: 2px; line-height: 1.42; }
+  .tech { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip { font-size: 7.6pt; padding: 1.5px 7px; border-radius: 3px; background: var(--chip-bg); color: var(--chip-ink); font-weight: 600; }
+
+  /* ---- Skills ---- */
+  .skill-row { display: flex; gap: 8px; margin-bottom: 4px; }
+  .skill-cat { flex: 0 0 110px; font-weight: 700; color: var(--ink); font-size: 9.2pt; }
+  .skill-items { color: var(--muted); font-size: 9.2pt; }
+
+  /* ---- Projects ---- */
+  .proj { margin-bottom: 8px; break-inside: avoid; }
+  .proj:last-child { margin-bottom: 0; }
+  .proj-title { font-weight: 700; color: var(--ink); font-size: 9.6pt; }
+  .proj-desc { color: var(--muted); font-size: 9.1pt; margin: 1px 0 3px; line-height: 1.45; }
+
+  /* ---- Education & Certs ---- */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .edu { margin-bottom: 7px; }
+  .edu-deg { font-weight: 700; color: var(--ink); font-size: 9.5pt; }
+  .edu-meta { color: var(--faint); font-size: 8.7pt; }
+  .cert { color: var(--muted); font-size: 9.1pt; margin-bottom: 3px; }
+  .cert b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1 class="name">Sateesh Kumar Kollati</h1>
+    <p class="title">Senior Full-Stack Engineer</p>
+    <div class="contact">
+      <a href="mailto:sateeshkumar4698@gmail.com">sateeshkumar4698@gmail.com</a><span class="sep">•</span>
+      <a href="tel:+919959715252">+91 99597 15252</a><span class="sep">•</span>
+      <span>Hyderabad, India</span><span class="sep">•</span>
+      <span>Open to Remote (USD)</span><span class="sep">•</span>
+      <a href="https://www.linkedin.com/in/sateesh-kumar-kollati/">LinkedIn</a><span class="sep">•</span>
+      <a href="https://github.com/sateeshkumar4698-pixel">GitHub</a><span class="sep">•</span>
+      <a href="https://sateeshkumar4698-pixel.github.io/sateesh-portfolio/">Portfolio</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary">
+      Senior Full-Stack Engineer with 6+ years building scalable, high-performance web and mobile products across
+      fintech, insurance, e-commerce, and AI. Deep expertise in React, Next.js, TypeScript, and Node.js, with a
+      track record of shipping production systems at MassMutual, Verizon (via GlobalLogic), and a Google engagement
+      at TCS — including an agentic AI product taken solo from greenfield to a deployed MVP using Claude (Anthropic).
+      Open to senior remote roles with US/UK companies (USD).
+    </p>
+  </section>
+
+  <section>
+    <h2>Core Skills</h2>
+    <div class="skill-row"><div class="skill-cat">Frontend</div><div class="skill-items">React.js, Next.js, TypeScript, JavaScript (ES6+), Redux, Tailwind CSS, Material UI</div></div>
+    <div class="skill-row"><div class="skill-cat">Backend</div><div class="skill-items">Node.js, Express, NestJS, REST &amp; GraphQL, Java (Spring Boot), WebSockets, Kafka</div></div>
+    <div class="skill-row"><div class="skill-cat">AI / ML</div><div class="skill-items">Agentic AI, Claude (Anthropic), LLM Integration, OpenAI API, LangChain, Prompt Engineering, Python</div></div>
+    <div class="skill-row"><div class="skill-cat">Databases</div><div class="skill-items">MongoDB, PostgreSQL, MySQL, Firestore, DynamoDB, Elasticsearch</div></div>
+    <div class="skill-row"><div class="skill-cat">Cloud &amp; DevOps</div><div class="skill-items">AWS, GCP, Azure, Docker, GitHub Actions, Jenkins, GitLab CI/CD, Vercel</div></div>
+    <div class="skill-row"><div class="skill-cat">Mobile</div><div class="skill-items">Flutter, React Native</div></div>
+    <div class="skill-row"><div class="skill-cat">Testing &amp; Tools</div><div class="skill-items">Jest, TDD, Cypress, Playwright, React Testing Library, Postman, Swagger/OpenAPI, Figma</div></div>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <p class="job-role">Senior Software Engineer</p>
+          <p class="job-co">MassMutual (GBS) · Hyderabad, India</p>
+        </div>
+        <div class="job-dates">Nov 2025 – Present</div>
+      </div>
+      <ul>
+        <li>Took a new initiative from greenfield setup to a deployed MVP, owning 100% of the full-stack build — frontend, backend, and deployment — while integrating Claude (Anthropic) to power agentic, autonomous workflows within the product.</li>
+        <li>Engineered secure, scalable financial and insurance platforms with React.js, Next.js, TypeScript, and Node.js (SSR), integrated with Java microservices and Elasticsearch.</li>
+        <li>Improved page load time by 30% through code refactoring, caching, and lazy-loading strategies.</li>
+        <li>Designed and integrated secure payment gateways and multi-step order-management workflows, prioritizing data integrity and regulatory compliance.</li>
+        <li>Built CI/CD pipelines for Canary and non-prod deployments, cutting release time by 40%.</li>
+      </ul>
+      <div class="tech">
+        <span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">Claude (Anthropic)</span><span class="chip">Agentic AI</span><span class="chip">Java Microservices</span><span class="chip">Elasticsearch</span><span class="chip">CI/CD</span>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <p class="job-role">Senior Software Engineer</p>
+          <p class="job-co">GlobalLogic (Verizon) · Hyderabad, India</p>
+        </div>
+        <div class="job-dates">Jan 2025 – Aug 2025</div>
+      </div>
+      <ul>
+        <li>Engineered micro-frontend modules (cart, checkout, product discovery) for a high-traffic Verizon e-commerce platform using React.js, Next.js, TypeScript, and Node.js with SSR, integrated with Java microservices.</li>
+        <li>Modernized legacy storefront components, improving responsiveness and Core Web Vitals through code-splitting, caching, and lazy-loading.</li>
+        <li>Drove defect triage across the e-commerce squad, reducing production bug resolution time by 25%.</li>
+        <li>Designed secure payment gateway integrations and multi-step order-management flows for the checkout experience.</li>
+        <li>Introduced automated CI/CD pipelines for Canary and non-prod environments, shortening release cycles by 40%.</li>
+      </ul>
+      <div class="tech">
+        <span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Micro-Frontends</span><span class="chip">Node.js</span><span class="chip">Elasticsearch</span><span class="chip">CI/CD</span>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <p class="job-role">Software Engineer</p>
+          <p class="job-co">Tata Consultancy Services (TCS) · Hyderabad, India</p>
+        </div>
+        <div class="job-dates">Oct 2021 – Nov 2024</div>
+      </div>
+      <ul>
+        <li>Developed reusable UI component libraries in React.js and integrated high-traffic REST APIs.</li>
+        <li>Increased automated test coverage to 85%+ using TDD (Jest) and documented APIs with Swagger/OpenAPI.</li>
+        <li>Delivered scalable, production-grade web applications for Google under a client engagement, collaborating directly with Google stakeholders on requirements, code reviews, and delivery timelines.</li>
+        <li>Mentored junior developers on best practices in UI development and API integration.</li>
+      </ul>
+      <div class="tech">
+        <span class="chip">React.js</span><span class="chip">TypeScript</span><span class="chip">REST APIs</span><span class="chip">Jest</span><span class="chip">TDD</span><span class="chip">Swagger</span><span class="chip">Google Cloud</span>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <p class="job-role">Software Engineer</p>
+          <p class="job-co">Aguila IT Consulting · Hyderabad, India</p>
+        </div>
+        <div class="job-dates">Apr 2020 – Sep 2021</div>
+      </div>
+      <ul>
+        <li>Delivered single-page and full-stack applications using the MERN stack.</li>
+        <li>Built secure backend modules for authentication and role-based access control.</li>
+        <li>Optimized database queries and API design, improving response times by 20%.</li>
+      </ul>
+      <div class="tech">
+        <span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Express.js</span><span class="chip">MERN Stack</span><span class="chip">JWT Auth</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Projects</h2>
+    <div class="proj"><span class="proj-title">FinPlan — Financial Transaction Platform.</span><div class="proj-desc">Built a full-stack financial transaction management platform from the ground up — robust backend logic and an intuitive frontend to streamline complex, compliance-sensitive workflows. <i>React.js, Node.js, MongoDB.</i></div></div>
+    <div class="proj"><span class="proj-title">SoloK — Retirement Fund Management.</span><div class="proj-desc">Developed a full-stack Solo 401(k) retirement-fund administration application from scratch, focused on secure, efficient, and auditable fund operations. <i>NestJS, PostgreSQL, React.</i></div></div>
+    <div class="proj"><span class="proj-title">Starplayers — Fantasy Sports App.</span><div class="proj-desc">Cross-platform fantasy sports application; designed GraphQL APIs and optimized response times for real-time scoring and leaderboards. <i>Flutter, Node.js, MongoDB, GraphQL.</i></div></div>
+    <div class="proj"><span class="proj-title">ORN-ai — AI EdTech Platform.</span><div class="proj-desc">AI-driven EdTech platform with a React/Node GraphQL backend powering learner performance tracking and reporting. <i>React.js, Node.js, GraphQL.</i></div></div>
+  </section>
+
+  <div class="two-col">
+    <section>
+      <h2>Education</h2>
+      <div class="edu">
+        <div class="edu-deg">Master of Computer Applications (MCA)</div>
+        <div class="edu-meta">Acharya Nagarjuna University · 2019 – 2021</div>
+      </div>
+      <div class="edu">
+        <div class="edu-deg">B.Sc. — Computer Science</div>
+        <div class="edu-meta">S.V.R.M College (Acharya Nagarjuna University) · 2016 – 2019 · 7.3 CGPA</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <div class="cert"><b>Professional Cloud Architect</b> — Google Cloud</div>
+      <div class="cert"><b>Professional Cloud Developer</b> — Google Cloud</div>
+      <div class="cert"><b>Professional Data Engineer</b> — Microsoft Azure</div>
+      <div class="cert"><b>Prompt Engineering in Generative AI</b> — Udemy</div>
+      <div class="cert"><b>Full-Stack Development (MERN)</b> — Udemy</div>
+    </section>
+  </div>
+
+</body>
+</html>

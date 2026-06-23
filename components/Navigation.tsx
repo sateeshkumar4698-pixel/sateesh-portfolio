@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-const links = ["About", "Experience", "Skills", "Projects", "Contact"];
+const links = ["About", "Experience", "Skills", "Projects", "Education", "Contact"];
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);

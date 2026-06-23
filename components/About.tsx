@@ -39,7 +39,7 @@ export default function About() {
                   <Code2 size={36} className="text-indigo-400" />
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold gradient-text">5+</div>
+                  <div className="text-4xl font-bold gradient-text">6+</div>
                   <div className="text-slate-400 text-sm mt-1">Years of Production React</div>
                 </div>
                 <div className="w-full grid grid-cols-2 gap-3">
@@ -61,7 +61,7 @@ export default function About() {
           <div className="space-y-6">
             {[
               {
-                text: "I'm a Senior Full-Stack Engineer with 5+ years of experience building production-grade web applications. My core stack is React, Next.js, and TypeScript — and I bring full-stack depth with Node.js, REST APIs, and databases.",
+                text: "I'm a Senior Full-Stack Engineer with 6+ years of experience building production-grade web applications. My core stack is React, Next.js, and TypeScript — and I bring full-stack depth with Node.js, REST APIs, and databases.",
               },
               {
                 text: "Currently at MassMutual India, I build high-traffic financial platforms that serve thousands of daily users. Before that, I shipped features at GlobalLogic and Tata Consultancy Services across web and mobile.",

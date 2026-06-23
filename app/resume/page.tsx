@@ -1,10 +1,11 @@
-import { personal, experience, skills, education } from "@/lib/data";
+import { personal, experience, skills, education, certifications, keyProjects } from "@/lib/data";
 import { Metadata } from "next";
 import Link from "next/link";
-import PrintButton from "@/components/PrintButton";
+import DownloadButton from "@/components/DownloadButton";
 
 export const metadata: Metadata = {
   title: "Resume — Sateesh Kumar Kollati",
+  description: "Senior Full-Stack Engineer with 6+ years across fintech, insurance, e-commerce and AI. React, Next.js, TypeScript, Node.js.",
 };
 
 export default function Resume() {
@@ -23,7 +24,7 @@ export default function Resume() {
         <Link href="/" className="px-4 py-2 rounded-lg border border-slate-300 text-slate-600 text-sm hover:bg-slate-100 transition-colors bg-white shadow">
           ← Portfolio
         </Link>
-        <PrintButton />
+        <DownloadButton />
       </div>
 
       <div className="min-h-screen py-10 px-4" style={{ background: "#f1f5f9" }}>
@@ -40,6 +41,7 @@ export default function Resume() {
             <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginTop: 14, fontSize: "0.8rem" }}>
               {[
                 { label: personal.email, href: `mailto:${personal.email}` },
+                { label: personal.phone, href: `tel:${personal.phoneRaw}` },
                 { label: personal.location },
                 { label: "LinkedIn", href: personal.linkedin },
                 { label: "GitHub", href: personal.github },
@@ -56,11 +58,7 @@ export default function Resume() {
             {/* Summary */}
             <Section title="Professional Summary">
               <p style={{ color: "#475569", lineHeight: 1.75, fontSize: "0.875rem" }}>
-                Senior Full-Stack Engineer with 5+ years of experience building production React and Next.js
-                applications, including an agentic AI product shipped solo from greenfield to deployed MVP using
-                Claude (Anthropic) at MassMutual. Delivered high-traffic platforms at MassMutual, Verizon (via
-                GlobalLogic), and a Google client engagement at TCS. Expert in TypeScript, Node.js, micro-frontends,
-                Elasticsearch, and CI/CD pipelines. Open to senior remote roles with US/UK companies paying in USD.
+                {personal.summary}
               </p>
             </Section>
 
@@ -107,15 +105,48 @@ export default function Resume() {
               </div>
             </Section>
 
+            {/* Key Projects */}
+            <Section title="Selected Projects">
+              <div style={{ display: "grid", gap: "12px" }}>
+                {keyProjects.map((proj) => (
+                  <div key={proj.title}>
+                    <h3 style={{ fontWeight: 700, color: "#1e293b", fontSize: "0.88rem", margin: 0 }}>{proj.title}</h3>
+                    <p style={{ color: "#475569", fontSize: "0.82rem", lineHeight: 1.6, margin: "3px 0 5px" }}>{proj.description}</p>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+                      {proj.tech.map((t) => (
+                        <span key={t} style={{ fontSize: "0.7rem", padding: "2px 8px", borderRadius: 4, background: "#eef2ff", color: "#4338ca", fontWeight: 500 }}>
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Section>
+
             {/* Education */}
             <Section title="Education">
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                <div>
-                  <h3 style={{ fontWeight: 700, color: "#1e293b", fontSize: "0.95rem", margin: 0 }}>{education.degree}</h3>
-                  <p style={{ color: "#64748b", fontSize: "0.84rem", margin: "4px 0 0" }}>{education.college}</p>
-                  <p style={{ color: "#94a3b8", fontSize: "0.78rem", margin: "3px 0 0" }}>Grade: {education.grade}</p>
+              {education.map((edu, i) => (
+                <div key={edu.degree} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: i < education.length - 1 ? 12 : 0 }}>
+                  <div>
+                    <h3 style={{ fontWeight: 700, color: "#1e293b", fontSize: "0.9rem", margin: 0 }}>{edu.degree}</h3>
+                    <p style={{ color: "#64748b", fontSize: "0.82rem", margin: "3px 0 0" }}>{edu.college}</p>
+                    {edu.grade && <p style={{ color: "#94a3b8", fontSize: "0.76rem", margin: "2px 0 0" }}>{edu.grade}</p>}
+                  </div>
+                  <span style={{ color: "#94a3b8", fontSize: "0.78rem", whiteSpace: "nowrap", marginLeft: 12 }}>{edu.year}</span>
                 </div>
-                <span style={{ color: "#94a3b8", fontSize: "0.78rem", whiteSpace: "nowrap", marginLeft: 12 }}>{education.year}</span>
+              ))}
+            </Section>
+
+            {/* Certifications */}
+            <Section title="Certifications">
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "8px" }}>
+                {certifications.map((cert) => (
+                  <div key={cert.name} style={{ display: "flex", flexDirection: "column" }}>
+                    <span style={{ color: "#1e293b", fontSize: "0.82rem", fontWeight: 600 }}>{cert.name}</span>
+                    <span style={{ color: "#94a3b8", fontSize: "0.74rem" }}>{cert.issuer}</span>
+                  </div>
+                ))}
               </div>
             </Section>
 
